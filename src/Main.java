@@ -4,9 +4,8 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
-        StringBuilder output = new StringBuilder();//конструктор для записи temp.txt
+        StringBuilder output = new StringBuilder();
 
-        //В папке Games создайте несколько директорий: src, res, savegames, temp.
         File src = new File("C:\\Users\\galka\\IdeaProjects\\Games\\src");
         if (src.mkdir())output.append("Директория src создана!");
 
@@ -27,7 +26,7 @@ public class Main {
         if (test.mkdir())output.append("Директория test создана в категории src");
 
 
-        //В подкаталоге main создайте два файла: Main.java, Utils.java.
+
         File mainFile = new File("C:\\Users\\galka\\IdeaProjects\\Games\\src\\main\\Main.java");
         try {
             if (mainFile.createNewFile())output.append("Файл Main был создан");
@@ -41,7 +40,7 @@ public class Main {
             System.out.println(ex.getMessage());
         }
 
-        //В каталог res создайте три директории: drawables, vectors, icons.
+
         File drawables = new File("C:\\Users\\galka\\IdeaProjects\\Games\\res\\drawables");
         if (drawables.mkdir())output.append("Директория src создана");
         File vectors = new File("C:\\Users\\galka\\IdeaProjects\\Games\\res\\vectors");
@@ -49,7 +48,7 @@ public class Main {
         File icons = new File("C:\\Users\\galka\\IdeaProjects\\Games\\res\\icons");
         if (icons.mkdir())output.append("Директория temp создана");
 
-        //В директории temp создайте файл temp.txt.
+
         File tempTxt = new File("C:\\Users\\galka\\IdeaProjects\\Games\\src\\main\\temp.txt");
         try {
             if (tempTxt.createNewFile())output.append("Файл tempTxt был создан");
